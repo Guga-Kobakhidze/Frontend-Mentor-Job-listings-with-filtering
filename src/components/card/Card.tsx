@@ -6,6 +6,8 @@ const Card: React.FC<productProps> = ({ product }) => {
     <>
       <img src={product.logo} alt="something" />
       <h1>{product.company}</h1>
+      <h1>{product.position}</h1>
+      <h1>{product.role}</h1>
     </>
   );
 };

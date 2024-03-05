@@ -2,10 +2,10 @@ export interface CardProps {
   id: number;
   logo: string;
   company: string;
+  role: string;
+  position: string;
   new?: boolean;
   featured?: boolean;
-  position?: string;
-  role?: string;
   level?: string;
   postedAt?: string;
   contract?: string;
@@ -16,4 +16,10 @@ export interface CardProps {
 
 export interface productProps {
   product: CardProps;
+}
+
+export interface FetchResult {
+  data: CardProps[];
+  loading: boolean;
+  error: string | null;
 }
