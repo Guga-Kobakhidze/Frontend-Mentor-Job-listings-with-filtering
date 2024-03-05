@@ -31,7 +31,15 @@ const CardListPage: React.FC = () => {
       <SearchBar onSearchChange={onSearch} />
       {loading ? <Loading /> : null}
       {error ? <Error /> : null}
-      <Box p={5} sx={{ display: "flex", flexDirection: "column", gap: "20px" }}>
+      <Box
+        p={5}
+        mt={5}
+        sx={{
+          display: "flex",
+          flexDirection: "column",
+          gap: "40px",
+        }}
+      >
         {filtered.map((product) => (
           <Grid
             key={product.id}
@@ -41,6 +49,17 @@ const CardListPage: React.FC = () => {
             container
             alignItems="center"
             justifyContent="space-between"
+            padding={"20px 30px"}
+            sx={{
+              backgroundColor: "white",
+              boxShadow: "10px 10px 15px hsl(180, 29%, 50%, 0.6)",
+              borderLeft: "5px solid white",
+              transition: "all 0.3s",
+              cursor: "pointer",
+              "&:hover": {
+                borderLeft: "5px solid hsl(180, 29%, 50%)",
+              },
+            }}
           >
             <Card product={product} />
           </Grid>
