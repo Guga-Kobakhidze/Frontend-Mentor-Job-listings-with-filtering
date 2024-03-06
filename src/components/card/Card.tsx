@@ -2,7 +2,7 @@ import React from "react";
 import { productProps } from "../../interfaces/interface";
 import { Box, Grid, Stack, Typography } from "@mui/material";
 import SpanText from "../typography/SpanText";
-import ButtonStyle from "../button/Button";
+import ButtonStyle from "../button/ButtonStyle";
 
 const Card: React.FC<productProps> = ({ product }) => {
   return (
