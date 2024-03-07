@@ -4,7 +4,7 @@ import { Box, Grid, Stack, Typography } from "@mui/material";
 import SpanText from "../typography/SpanText";
 import ButtonStyle from "../button/ButtonStyle";
 
-const Card: React.FC<productProps> = ({ product }) => {
+const Card: React.FC<productProps> = ({ product, clickBtn, onFind }) => {
   return (
     <>
       <Box display={"flex"} alignItems={"center"} gap={2.5}>
@@ -51,13 +51,23 @@ const Card: React.FC<productProps> = ({ product }) => {
         </div>
       </Box>
       <Stack spacing={1} direction={"row"}>
-        <ButtonStyle name={product.role} />
-        <ButtonStyle name={product.level} />
-        {product.languages.map((language) => (
-          <ButtonStyle name={language} />
+        <ButtonStyle name={product.role} onClick={clickBtn} onFind={onFind} />
+        <ButtonStyle name={product.level} onClick={clickBtn} onFind={onFind} />
+        {product.languages.map((language, index) => (
+          <ButtonStyle
+            key={index}
+            name={language}
+            onClick={clickBtn}
+            onFind={onFind}
+          />
         ))}
-        {product.tools.map((tool) => (
-          <ButtonStyle name={tool} />
+        {product.tools.map((tool, index) => (
+          <ButtonStyle
+            key={index}
+            name={tool}
+            onClick={clickBtn}
+            onFind={onFind}
+          />
         ))}
       </Stack>
     </>

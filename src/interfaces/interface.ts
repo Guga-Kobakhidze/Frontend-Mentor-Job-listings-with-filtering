@@ -16,6 +16,14 @@ export interface CardProps {
 
 export interface productProps {
   product: CardProps;
+  clickBtn: React.Dispatch<React.SetStateAction<string>>;
+  onFind: () => void;
+}
+
+export interface ButtonProps {
+  name: string;
+  onClick: React.Dispatch<React.SetStateAction<string>>;
+  onFind: () => void;
 }
 
 export interface FetchResult {

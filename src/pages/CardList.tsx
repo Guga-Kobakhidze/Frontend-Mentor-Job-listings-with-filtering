@@ -10,10 +10,12 @@ import SearchBar from "../components/search/SearchBar";
 const CardListPage: React.FC = () => {
   const { data, loading, error } = useFetch("/src/data/data.json");
   const [filtered, setFiltered] = useState<CardProps[]>([]);
+  const [clicked, setClicked] = useState<string>("");
 
   useEffect(() => {
     setFiltered(data);
-  }, [data]);
+    onFind();
+  }, [data, clicked]);
 
   const onSearch = (searchTerm: string) => {
     const filteredItems = data.filter(
@@ -24,6 +26,18 @@ const CardListPage: React.FC = () => {
     );
 
     setFiltered(filteredItems);
+  };
+
+  const onFind = () => {
+    const clickedBtn = data.filter(
+      (item) =>
+        item.role.includes(clicked) ||
+        item.level.includes(clicked) ||
+        item.languages.includes(clicked) ||
+        item.tools.includes(clicked)
+    );
+
+    setFiltered(clickedBtn);
   };
 
   return (
@@ -61,7 +75,7 @@ const CardListPage: React.FC = () => {
               },
             }}
           >
-            <Card product={product} />
+            <Card product={product} clickBtn={setClicked} onFind={onFind} />
           </Grid>
         ))}
       </Box>
