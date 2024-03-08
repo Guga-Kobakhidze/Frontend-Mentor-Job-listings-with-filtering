@@ -1,7 +1,7 @@
 import { useEffect, useState } from "react";
 import { CardProps, FetchResult } from "../interfaces/interface";
 
-const useFetch = (): FetchResult => {
+const useFetch = (url: string): FetchResult => {
   const [data, setData] = useState<CardProps[]>([]);
   const [loading, setLoading] = useState(false);
   const [error, setError] = useState<string | null>(null);
@@ -10,7 +10,7 @@ const useFetch = (): FetchResult => {
     setLoading(true);
     const fetchData = async () => {
       try {
-        const response = await fetch("src/data/data.json");
+        const response = await fetch(url);
 
         if (!response.ok) {
           throw new Error(`HTTP error! Status: ${response.status}`);
@@ -26,7 +26,7 @@ const useFetch = (): FetchResult => {
     };
 
     fetchData();
-  }, []);
+  }, [url]);
 
   return { data, loading, error };
 };
