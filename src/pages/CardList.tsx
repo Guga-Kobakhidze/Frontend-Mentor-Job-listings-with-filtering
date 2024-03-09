@@ -8,7 +8,9 @@ import Error from "../components/error/Error";
 import SearchBar from "../components/search/SearchBar";
 
 const CardListPage: React.FC = () => {
-  const { data, loading, error } = useFetch("./cardData.json");
+  const { data, loading, error } = useFetch(
+    `./cardData.json?v=${new Date().getTime()}`
+  );
   const [filtered, setFiltered] = useState<CardProps[]>([]);
   const [clicked, setClicked] = useState<string>("");
 
