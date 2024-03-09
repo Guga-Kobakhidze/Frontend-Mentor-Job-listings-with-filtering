@@ -1,8 +1,19 @@
+import Image1 from "../assets/images/photosnap.svg";
+import Image2 from "../assets/images/manage.svg";
+import Image3 from "../assets/images/account.svg";
+import Image4 from "../assets/images/myhome.svg";
+import Image5 from "../assets/images/loop-studios.svg";
+import Image6 from "../assets/images/faceit.svg";
+import Image7 from "../assets/images/shortly.svg";
+import Image8 from "../assets/images/insure.svg";
+import Image9 from "../assets/images/eyecam-co.svg";
+import Image10 from "../assets/images/the-air-filter-company.svg";
+
 export const cardData = [
   {
     id: 1,
     company: "Photosnap",
-    logo: "./images/photosnap.svg",
+    logo: Image1,
     new: true,
     featured: true,
     position: "Senior Frontend Developer",
@@ -17,7 +28,7 @@ export const cardData = [
   {
     id: 2,
     company: "Manage",
-    logo: "./images/manage.svg",
+    logo: Image2,
     new: true,
     featured: true,
     position: "Fullstack Developer",
@@ -32,7 +43,7 @@ export const cardData = [
   {
     id: 3,
     company: "Account",
-    logo: "./images/account.svg",
+    logo: Image3,
     new: true,
     featured: false,
     position: "Junior Frontend Developer",
@@ -47,7 +58,7 @@ export const cardData = [
   {
     id: 4,
     company: "MyHome",
-    logo: "./images/myhome.svg",
+    logo: Image4,
     new: false,
     featured: false,
     position: "Junior Frontend Developer",
@@ -62,7 +73,7 @@ export const cardData = [
   {
     id: 5,
     company: "Loop Studios",
-    logo: "./images/loop-studios.svg",
+    logo: Image5,
     new: false,
     featured: false,
     position: "Software Engineer",
@@ -77,7 +88,7 @@ export const cardData = [
   {
     id: 6,
     company: "FaceIt",
-    logo: "./images/faceit.svg",
+    logo: Image6,
     new: false,
     featured: false,
     position: "Junior Backend Developer",
@@ -92,7 +103,7 @@ export const cardData = [
   {
     id: 7,
     company: "Shortly",
-    logo: "./images/shortly.svg",
+    logo: Image7,
     new: false,
     featured: false,
     position: "Junior Developer",
@@ -107,7 +118,7 @@ export const cardData = [
   {
     id: 8,
     company: "Insure",
-    logo: "./images/insure.svg",
+    logo: Image8,
     new: false,
     featured: false,
     position: "Junior Frontend Developer",
@@ -122,7 +133,7 @@ export const cardData = [
   {
     id: 9,
     company: "Eyecam Co.",
-    logo: "./images/eyecam-co.svg",
+    logo: Image9,
     new: false,
     featured: false,
     position: "Full Stack Engineer",
@@ -137,7 +148,7 @@ export const cardData = [
   {
     id: 10,
     company: "The Air Filter Company",
-    logo: "./images/the-air-filter-company.svg",
+    logo: Image10,
     new: false,
     featured: false,
     position: "Front-end Dev",
