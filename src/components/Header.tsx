@@ -1,5 +1,5 @@
 import React from "react";
-import HeaderBg from "../assets/images/bg-header-desktop.svg";
+import HeaderBg from "../data/images/bg-header-desktop.svg";
 import { Box } from "@mui/material";
 
 const Header: React.FC = () => {
