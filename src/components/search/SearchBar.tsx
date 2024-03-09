@@ -36,6 +36,15 @@ const SearchInput: React.FC<SearchInputProps> = ({ onSearchChange }) => {
           top: "10%",
           left: "50%",
           transform: "translate(-50%, -50%)",
+
+          "@media screen and (max-width: 1200px)": {
+            top: "40px",
+            height: "40px",
+          },
+
+          "@media screen and (max-width: 800px)": {
+            display: "none",
+          },
         }}
       />
     </form>

@@ -50,7 +50,17 @@ const Card: React.FC<productProps> = ({ product, clickBtn, onFind }) => {
           </Typography>
         </div>
       </Box>
-      <Stack spacing={1} direction={"row"}>
+      <Stack
+        spacing={1}
+        direction={"row"}
+        sx={{
+          "@media screen and (max-width: 1200px)": {
+            flexWrap: "wrap",
+            gap: "10px",
+            marginTop: "10px",
+          },
+        }}
+      >
         <ButtonStyle name={product.role} onClick={clickBtn} onFind={onFind} />
         <ButtonStyle name={product.level} onClick={clickBtn} onFind={onFind} />
         {product.languages.map((language, index) => (

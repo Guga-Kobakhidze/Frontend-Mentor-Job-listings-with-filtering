@@ -8,7 +8,7 @@ const ButtonStyle: React.FC<ButtonProps> = ({ name, onClick, onFind }) => {
   };
 
   return (
-    <form onClick={onFind}>
+    <form onClick={onFind} id="form">
       <Button
         onClick={onBtnClick}
         variant="contained"
